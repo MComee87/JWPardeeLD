@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>JWPardeeLD</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
+    <style type="text/css">
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+      a#menu svg {
+        width: 40px;
+        fill: #fff;
+        background-color: #000;
+        border-radius: 5px;
+      }
+      nav, main {
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+
+      /*
+       * Off-canvas layout styles.
+       */
+
+      /* Since we're mobile-first, by default, the drawer is hidden. */
+      nav {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+
+      /* If there is enough space (> 600px), we keep the drawer open all the time. */
+      @media (min-width: 900px) {
+
+        /* We open the drawer. */
+        nav {
+          position:relative;
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+        }
+
+        /* We use Flexbox on the parent. */
+        body {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
+
+        main {
+          width: auto;
+          /* Flex-grow streches the main content to fill all available space. */
+          flex-grow: 1;
+        }
+      }
+
+      /* If there is space (> 800px), we keep the drawer open by default. */
+      @media (min-width: 600px) {
+        main > #menu:after {
+          content:;
+        }
+        main p, nav p {
+          text-decoration: none;
+        }
+      }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav id="drawer" class="dark_blue">
+      <h1 class="text-center" id="heading">Menu:</h1>
+        <ul class="text-center">
+          <li><a href="index.html"><h2>HOME</h2></a></li>
+          <li><a href="about.html"><h2>ABOUT</h2></a></li>
+          <li style="font-size: 30px">PROJECTS
+            <ul>
+              <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
+              <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
+              <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
+              <li><a href="wings.html"><h3>In the Wings</h3></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><h2>CONTACT</h2></a></li>
+        </ul>
+    </nav>
+
+    <main class="light_blue">
+      <a id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="heading">In the Wings</h1><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>In the wings of your event you will find a countless number of talented people working hard bringing it all together. Here is a little sneak peak of the detail work that goes into some of the past shows Jeffrey Pardee has worked on over his career. </p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/0L0NxbR2K_UZ6Hk2sLKeEb68dcW09tP8tjioYHjk43uXRZH-0RnLVJjYGCxEb-JyIaNeMMT_EDtbqdnfuIxGBd4IshV7Xd45aNL4oVPEMH9erOOwkbs1r8cWDaxGsN8KRKYvGSrurvvxuN9Me4AkgdFTUMVbjoVKHjb0XpYPCL4Q1Q_byIILRJHdUha-BpTX05leCixn0JW5WkBF8yuaBLHECOry2_G5QmorsWnuFSTNT071y7zkx9MWk_ZEcX8Ev7n0PgqFdrygMLb7dlL6GOncr36kkIWTCerT94VANvBvakQg9_dq9kjV_t9J5vX3HUgVF-q8v909fh5-Dprw2jhBozerfVbXEdTdrMPQ0xo7Og5zR94EMkbg_eQneC7owjV2nVTfJ32u39G1qbwruyqlZ6_ZpLFbWHdnmio0x-nrG0nv_4tFUoaENIt9Cv28JSbzSg3ZqOIti1kikKbKQQAhIDJ47YQ86Ue5eaMBskQGWS_lUoJGyd45txDi7ZAeecFkQYmGfjr-zlO96UnJbAYxvbv92z2nCjXlXgJMLkKAWgJ-22NxsAhHMxRKyBbW-alIiLgink3ZlQXo26ZWjWbWoPSKh-E4qJ0u_z0yRdjT_h0TFdnE=w851-h638-no">
+            <br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/bnarPpD3E0dTOOTxf9ttDs0K55tqrP6UFU-ckICK70IqJ9fcS-H7VJvy8Ablw-Jk_-yKWY_ELiF3SWQMb851NSlPoHzMISBPXnqdTzkyNMQrMMFxwAC_ZMHDNPJ-q3cu-kxTJG2np4fXX-pMRg1RfHlL385W_Y_ZlPhAM5w-9YKZzRqrKytNg5GaVMJ-q2ajv1MfSaXnzVQqbedI1TWOFBm70x2UQsIMKKlMXhlPMadlwQhkUe2QFBsfv234McC-z9GXDrLcIOsAF3AArT2jJH_b6rTP8QDhUQQ6L-Brism-B8_TnwB_2DWfMIVJ1sY2IabXoBAS0gEdg-l6NlR_zKsF1DUozGYhJiIE518iLLwl_LzxhjlcFaKrXkJYO0K8D9W7tHIqfb2xN2V8McCRSWLt3RZ_pPslSvQC6o0tDaDBlgDP-XrNKhar7OFES4vmZ0jJheNN5-7YWiG8VJnqOxaC2dMd7AopFrYnrGdurfqMf-W9x2Gql_7XP8AKZjF_XM30C-UIa3mBLBKSyj66q9ncD5ry9qQ7Ie7b_cVJrImAd1FGhWnPXIuBJtcJOhTImaowcRA6hY4fBNVCXS61Aier9wPSpXNDoru7ODUq8GNH1NKEpPrg=w640-h480-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/GfNxluiDzXikUnUS9-SCABh-UL5sQyZBgqhmqpGebQK4qIzEWuEZGc4SI66_s5UYarVk0lKGNAY4oxWFT2KY9ImGtGdzHlS9Vi74fMUTvd4BsljRQ1f5Zr5GzTClI6asmUTSMiPLis4ufhBD_Jm546FByhzDFJxYHPlhMrVjAy6faPd1p1OeEqmGjfgkRlAzmuOewFWI56Ujs3kvvwOneb04cDS0CPWUM6hcGu_XluOxWHVcWkIzXgLylPxpUOO2EPg83T99adJ-QzXmYl4CdcGC1TV_scKarU4TZ6HgBsXV2Xqcx33V0FQ39xbRmgKGzWp0VVeBil4g9qbvhbAJYHEWZrCeinpmKusciXHgjZzf0XBVtf-rwgOSJ-jC5G7C32uCHCY6qPllrKAPgZ51o9nn3KxsFWtUzCYhV1xNj2fkbR3Ohz3pcTLkMHBEcpLiTumt93fDKGfAbrbmIOYRntNZbgxxsNUhyWwlA1ibCxDkJta3Z2IE49u_qTlRLB5aQtz19qekHkFFmoNg6gQ5vwKz3-XkKQJXaG7TKG3xQQm75l-SrYXN1q8pBgRJvwvvTI2NCj8AvTRvlzYUZ1re9SO3GrmQrr1ocR4GL8D4RL8hvdOB0dT-=w851-h638-no"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/M4wo3R6JNhcFWxJ2Uzr3ieBYom4y8N6dJKOs9VG2Q8GqwD1nTwNoVmSxQjsc7L4NhOShhs2FdfeKNSwupcISPc1JRyiIbhCBG6NZ8MDjIsUse3XU6pqjgU-zkyzIJVe3Mn44P5NTfVpYPmwAywLZ3OhuuHyJCKPhYm5znCDH0ut-uHE-JUqbTCuZor0ir4DL499TheCYgoHgF3jSL_CHPHWnAEAwf25BAQdWsEJ8BynsPrw9rELRMBpMOmSEBYPB6FLNaYD_eGJX7KGqArDCNiEKZYquQDOoWi3kF7LRwRWik0KZ_yNdkWkyqkkqH_o9BySOiWzUw0QrJwGBkDuNHKFpUvkBf7tmEQG3ZPJkxWlJ_i9YP-jOBPHd4gZtIfPEVWNxnRwg1a8_hmV-yfTgO6DmD1Kz5vtZgqbezziuu9xqmCk2PRWowbcgQ1_UpVNgwDNZdDt_bdYV1yzuF9K7xZIKlMqlssQ-IoJeGzGej-u0T3jMtXkbJtWeOBInKVDiNJXbuPwgQsXbe9Vl4bDosEEnmWHrPufgYsgcisPp2XF2H8Sq6eLDJvPreVevwPbB4BHK_dhuicrW0EwnDlXkC26le2a6gHRxT69EQUVobwMpjNFjP6Jk=w559-h282-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/HvfXl7CrUd7Gah2CcTybjCCAmup1uXiN1c-FqCd1JocemtdMkoHEYQWga4pjgphm6F42yhWdxyX0UJw4a9_cxml35kFDURqL2XYFu8wAySQOes4bjyZFsbVZ47L4ZQK7KDlxsJyo88Cfugm8pfqo4GCMUjRL3BPnbFe697bd8_VwLAnlSSp4Dj-TmNXgZaNgLfQwah20bV-4CC4t3uSKyowJ54Ct800qW7rhvfWTLok4X7v-NoY8CVYKjqf3Pzi7Ngyb313lOYkBHppTxlsYfmr3vz_th3g5Rb-PmUKy--r0DvCu-zyEfPRoB_QRJ90U25Igkaz66cQaep1XG4mw6kIVvSZAqfYfWzNPeP1wzl5AnBMyi0VsjHImgO4_cODrTZwiJi9ziH0-e35qLh2NqcPF2yDBhxWlSj5mji0Tat3hTisy6ZWLsKSmSQqY5LvwALbG4RQccMDWxUhljl57lnj27XpPO4Q8ohIE9WcplCMfAlDFviv5QMYYWgOjJ0FD3azuKyYv4sWhLydC0bJbMr1QfcEJRCyTozGQs4ysiyjcQNMFrvVWvOf21LUrx00LEfJ0FR5o8n7DI-I8d7yysNoSohNLJ4iI4jecByWjv329r7EJim7C=w1179-h638-no">
+            <br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/D-_YrDRX8p_dd3M3Z4EYyWSRVA9m6Vbn1APf3_aZooq_3sfWKdWfgHjHUsw33PtxKzXMT7qICkp3FK5DnnteJ9p-ocr-15phPRbL6gL0NDxmifcfmzscygqSRq9XWBv-ixvoArO_mtgHjMT5c-EVPBeI2TivnnzVKRYf-uST2iFnRvSpIvDTEFzPYGOY4y03vshP9gF0ab9XclrNa3CH2urZ9dM_2Rv4TRnb8s4PsJu9ZmzV4KD2QytYrRhc9TiBtEQUGzrq3MQc2yKUI1MrEtjfJk8thPFihotBzXJ1EDr4_qEkGQE_UYqIA0uF-z1Jttt3RyfVviqwX3YLSKvJ8iB5vbPu6Gsyj4TsEx17fU1UjHnHGxyguaD0CyqXLKbLA5EFgN-KW_VzwUl8db0AkKzQFcbjBRbj_wWf9Z4RyAmtseIJ2hJUftE3qvpuHJZ16eN4YsmVy15GRHzJ4nLYVeTWY4SsZjqsk9Z31ejltfmxoaTHDLxtkH7FmfFQsJfYYOYI7JTHayALGmO3EEXGf2UYPc0BKaNMjRX7ywPmwJ8ua05ht7KYFDkUP12t-wHVYkOrKqWCbTE5qrwZQowx-oBCsw8h1fS5bgOHbjPTlzf8ego41wUt=w592-h270-no"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/sdRKGvC2GGsRBIiu8Bri9TwyuhoZlrxH_22sif0cpb5DU5swl_ojeQ8xGUD6ulYON4X6UiGr-fVHnAZEw_JPlM6Pthuu7rzzPX-LJqnfOzaJiw9t8oYPgAu86z_TujVMThtY9Y8A2I9Q0fpu9-FtGEmnYRcXC1VZZJdoazDKAtt4ojzR-Dme2P4H0qsdsKMtMe9xqPw82xnxCjTLWD7LwvuONkCf5dl0693ARs_qQ6AxjW_PdXPABNEJAvD4sRSYRC3Rf6SbDH4c_BZyzideJkxH2uP2_afm1UAl2yC8IW-Dgvtz5DhtRlYAUEfEiTdO5pnBy37MuSvmLlNqQFqva8Dv1uigm1WlvhBFU_RokPx4llzniBci9WPH9TdBLY40txdBil_kfoWKte-Msnh9ERsOTW0MJkNm82ldNnoR3wCWrlRPwNkdhWbD97ump1_tC-rp3Or-aW7Tw8-QAOf2HPaMKvfNzrCzI99_V3vGs064gHPO__SHBRW86AH1XAd4XDpWjQ3N1UwBfm4jmLiT65otzDtoloy8sGHnaCl5fGt4PL5vR3tyPa41LS0lhcV7zx_w0aUP1kGIcoYMemzx8s4lhtUzcZL27_eKzCg2F8nZaQfoQ7q5=w851-h638-no">
+            <br>
+          </div>
+          <div class="col-md-4">
+            <br>
+          <div class="col-md-4">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p><a href="wings.html">&#60&#60 prev</a> &#8226&#8226&#8226 </p>
+          </div>
+        </div>
+
+
+
+      </div>
+    
+    </main>
+
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    </body>
+    </html>
