@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>JWPardeeLD</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
+    <style type="text/css">
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+      a#menu svg {
+        width: 40px;
+        fill: #fff;
+        background-color: #000;
+        border-radius: 5px;
+      }
+      nav, main {
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+
+      /*
+       * Off-canvas layout styles.
+       */
+
+      /* Since we're mobile-first, by default, the drawer is hidden. */
+      nav {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+
+      /* If there is enough space (> 600px), we keep the drawer open all the time. */
+      @media (min-width: 900px) {
+
+        /* We open the drawer. */
+        nav {
+          position:relative;
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+        }
+
+        /* We use Flexbox on the parent. */
+        body {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
+
+        main {
+          width: auto;
+          /* Flex-grow streches the main content to fill all available space. */
+          flex-grow: 1;
+        }
+      }
+
+      /* If there is space (> 800px), we keep the drawer open by default. */
+      @media (min-width: 600px) {
+        main > #menu:after {
+          content:;
+        }
+        main p, nav p {
+          text-decoration: none;
+        }
+      }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav id="drawer" class="dark_blue">
+      <h1 class="text-center" id="heading">Menu:</h1>
+        <ul class="text-center">
+          <li><a href="index.html"><h2>HOME</h2></a></li>
+          <li><a href="about.html"><h2>ABOUT</h2></a></li>
+          <li style="font-size: 30px">PROJECTS
+            <ul>
+              <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
+              <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
+              <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
+              <li><a href="wings.html"><h3>In the Wings</h3></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><h2>CONTACT</h2></a></li>
+        </ul>
+    </nav>
+
+    <main class="light_blue">
+      <a id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="heading">Corporate Events</h1><br>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/9Edqd5E_UBHxP70l-CeZUtzn-NbQzbeFjQmNCG7zYMRblwZBnEtD-X5Vvg_UOAFL_H7j7wl-8uzLXun6dF45wQaxiM3dqkmwonW8itIB2H8DFnFVBAw2r5kKJv38XUt96Oxeatqn5jvbTpDUaEDSelJHmvLkvRNFh8tskqlDIpgHfXsq6FzUIuCTfOI8pggbqyUohb6L8tDEqLM9n9u1x4-M7ttrLO5Oy81EnpNelDQMou1uGgba72vk622EWPb8jprGayvJi9e3Cafh7DW4ugaCnA-Ge0E1WXCmIo7V5WHmijt-Arl4wcnju1RG4UL9qIALKkUH-tq5IvV4AqJ9Voi_r4aACr6WGUvp3ELrIVJ62VJoUHcdb_Sqm1clhRubjUUezwV02Pj9oLRiY5pq94qSZeK_a814-hgID7T4guHWW5FbAqzQUGDDqpSi-jzIozO3SN72gbtTgrUNwSXCe7tSMSfn8z5b9VmwER8DHyUKMTfvcoO1imWDJ19bY8VY3TyKz6xac8tP9oZI1Mh9M87iYv_Mp4gfDYcN-U4Omn58q-AwcqEdYkaCQBKWQKg88Swi0sIEFTSOGwoGjLVXwsrq2TQT9XUd8_ada-Nbcg7LRwGo7iNg=w960-h576-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/zS6gu-Yi_UQv6nXeLEskyvRp6vfEh4yxR5oDk1670caJWaDBJ6Px74NKExYtpWG931tbivlaYzeRHYfJ17zd6tbMaVR4FkgLxQMr5g3kYJNkZqoY5cbDpQTsE9jSOK3RdIqqosfeaaIHl5BCpeyeZ1ojo6YUbODe85kd_TUGP5mf3Ip2-Ja0bgx2n9_65BCT2ioYg9UM2rn2b5qhjEsKiLSgOm-naFEwcqHRrBCmmZY-MdYDWJqU3lbCzua3DJi066UkKKq_4UTnnXeba064TFbQIMFUTXfUBVcYQ6uyTmeFS3E0o8SCvNDROBJEzo8iky5JdmJuSUB5aDl1QvR9OhTQIsKA9XeJB3KWHhHVbzhNbV35CoGJiJ-lbpQd0vxpmXJHqR0hgMXIrKRYpZPo82CZq6f1ac_ooep9CwK57R4QfWcK8vUWO3v8EnLmfXZt3Ta6hJ2btg8Gb7k1i0hhTjMgfNusSchveXZnQv0e5EhoUWzDZjAsxyBFcgMNfipwYrdF0CB7peofIZLpup2gD9kOVkuHt95uPTdMvnUuWaCPrmW42eeFCaet-c4QI5mBnOQzwjwrOfLUW_0pwZwVWExdB-1ylxLdrGl1X4G66VvT76wm9WKF=w850-h638-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/q_TZNVGAgnmpKi7VovoAosjDRYRc5wHidU7--u3nRnSVRilaiedb1WjJu0K5sFLuQdZnULWEdP7mGd42R7O_3teJyqniwvWG1WF7Fj4X2IDc-UDZoDHSvuL10eKePzKxiv4exwD3bsbr65rimOSmmLw1z2EJ6Iny3oIMLIjjd0S7qsVDsycYHZu0ZrpNCrvUXHr7VteHcvq1QPGwjreWQC1Nr_dblVSoFpZbD5R1T0cIanx7qyYBGvMyQlrPC_K6uXuAALwQ1LUGT78c6VkpD5kINYkFSombqjyGCDWn8GOF2CpXpf9wsllCvfVuoKdTkMJtEvuLvopWwqC-CCSoBZLZto-Km9sCqL6fftwFsMEujhzok2hln4AezFnBvz6SY3k1BrZay1zsVAHLhjMbCKXK5PCWs6ljQcC7lN7g6F5G8OK74y8VB9HDSC6RCpZpVdjq-NYmrn-reywSec1pTxEVtCuIuHr1Swdc2aLl2sWRH0-Sywgpj8qyyGVQZ_eZfPnMPse5Gc88d8WLNixa1Skw14sGZkJEnLD54KSqm79owf_8UVC68TfOHx1pz2uAVYaWc9hxzcndhmGHo9FbaK44YnTJR6xX5vjcy5a321RuD_QV2FPC=w850-h638-no"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/Upmtvco93HnW9cBybGs43G3pQz05wwMe2fD6Gd8cbPdgQN7m2il6R_8KR0CeIQa53CUq3tNuKRxOUS14YeVqALqwlk7hNscJ6w-PKBmxECs2ObTQnnUpmJnhk1Cd04SpTYod5chSsMF3BkCLTCHYSWeoqAo8X049jTKKevQV7aR7xi4gMGe8hzMBLmtfHvCQy_gMnHcbDg6C815hS5r7QI5uPkuWfh5nEXYBjOPQ5iAlLxnjpj_FAyUgEpxBxmlbLOvhzfRFRWNQaXKlgh5V9rluQ3q_Pr2v9BDjRvbt_rA3M-CCqao3t5e8E1Sxnv04LPrhzeFKCfVuyMqA2yMdYfMsK5ep99A7JN9dHM9CD4Fr_ayko-yDCsvO-uCKkMOVgtW-9Ox7Tond_3nkwEuEqVQNbIzTNRfGJaPjDBF_fE872BSP08bGt6EecGFb9W8wfDGLNqjxRYe9GIJ4lSWNwsVbVxuhdPQJbYZFy8D9ZW1Zo-7ovl8mTM53ENu2dexhIF0r_zdP7eX3ilO7OdrIw8pBYW7tjzjcEv61AqRCpZeCL9NXqLDyWIJlA4uz2PTYGR0Cc8sN-WURraG4eseBwAkbBF73uxtgVGVsT2TG8DT5OhLjXpnt=w957-h638-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/pgmJW21VKgQxTHkah7AEkheNbVQAe_AS3XSDdY7BMnk9xyPS_Pmd-VXrI0wVmKK7H3S69QYSvFPfOERIKKrxLgu78zJc5klgIa9GPDOFRG6MsoXiw3FwtT1BBC7rRaH4QTnsuG6XaPNc5IPZ4dPMc5j2hLREMj7E_ggC9xN-r-WvQ8CFN-BRqomuvH9n8rPG4aFQv6JNUErVi8VsEafx6ejqkS37thSAVJc3aFbqJltb_ADouWw0SepJJ7UKWNXpwg5QANfpPGUrJQS4uerjeq0-Id7E0wSo9OQ1ctYJOQ8CarU3v6mQrdXQRI9peVvAcjv0egeifOu1I8sP3__tucZwGyU9xfuNpS099RwgJjIfZbP8w3XveHp_G_lyvQONXoicsF7L1RkSHY6IodgkiehjIDdOlb_Uqtdhw8BWDGEXfDiX6d8OPrBJicFdZ7PrSAiQO1a_SooXs7T8aVpCw6K15qnJH4r1KC4Cb2R5fB6dYQxvAlDbWyTHwl5fP_KOFupVY03rMDBshg2R7abgTcozewdeyHiS5MNzLnI3h3YPdDPpi5JS1xCNkAdhD68B8DBlHs2qBfbuvmkJhFQ8liCLXplajnEzL81U0gGP4IUIXUeZ6Hoc=w957-h638-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/BTxtVKOWX_2Umq4cw_8Ylb-ZLPFL2nomE2x2RJliKqM7y3ih_XAQVAHjYkebtP-ApQ25uUc3ZHd5V-XHmT35ehBaKCx4JzHfEsC213goh8Ws1nCeKFRct7r3iv7bheqIWtZJYygL2QwOClbjSfMQ5JkfeAK8qoEsaJp0IE1a2YzKBu6Dqm165NKt9f_sEZMhXydcR4dF4YOAeX_NzVzw1gqcVn8uwJC3-GVODcOJcTK2-BJ0tLeWgdUsusztmn1OXJR8M061n6nkigk2I3439ths7Kw3tdRL7umNyeHZmCxlbvwB5DPzM_sObf15TWBmNvTKRDAY98bcCUEw5LfwTgghBg9kn7krGRVctCcnvSzxLtwCnJj93JuleAVy3gt2S15ft9eCb2ZzbKq8qy59bH0GUVgNHJsjKmQzshzuyxpvlubn18tSn9hQGC3Mb6xlG_p6jQFfbxW31BQx1Yc0R57IpoLbp21xbJ5DzEzHYKC22JoWAxermuqag5qjsDSt0WNspqAYDV4HgPI98HGpe_sDqePa4W04jahdQg2zHKrxNEHrN3uYC3Hyr6NrqQ9oaGdBaCjMnx8oi4ty6kLo3pgXToqjwSmD2AL1kEqZDPHJb4rSXAlp=w960-h629-no">
+            <br>
+          </div>
+        </div>
+
+        
+
+        <div class="row">
+          <div class="col-md-12">
+            <p><a href="corporate2.html">&#60&#60 prev </a> &#8226&#8226&#8226 </p>
+          </div>
+        </div>
+
+
+
+      </div>
+    
+    </main>
+
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    </body>
+    </html>
