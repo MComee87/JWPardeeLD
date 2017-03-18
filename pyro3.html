@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>JWPardeeLD</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
+    <style type="text/css">
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+      a#menu svg {
+        width: 40px;
+        fill: #fff;
+        background-color: #000;
+        border-radius: 5px;
+      }
+      nav, main {
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+
+      /*
+       * Off-canvas layout styles.
+       */
+
+      /* Since we're mobile-first, by default, the drawer is hidden. */
+      nav {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+
+      /* If there is enough space (> 600px), we keep the drawer open all the time. */
+      @media (min-width: 900px) {
+
+        /* We open the drawer. */
+        nav {
+          position:relative;
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+        }
+
+        /* We use Flexbox on the parent. */
+        body {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
+
+        main {
+          width: auto;
+          /* Flex-grow streches the main content to fill all available space. */
+          flex-grow: 1;
+        }
+      }
+
+      /* If there is space (> 800px), we keep the drawer open by default. */
+      @media (min-width: 600px) {
+        main > #menu:after {
+          content:;
+        }
+        main p, nav p {
+          text-decoration: none;
+        }
+      }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav id="drawer" class="dark_blue">
+      <h1 class="text-center" id="heading">Menu:</h1>
+        <ul class="text-center">
+          <li><a href="index.html"><h2>HOME</h2></a></li>
+          <li><a href="about.html"><h2>ABOUT</h2></a></li>
+          <li style="font-size: 30px">PROJECTS
+            <ul>
+              <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
+              <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
+              <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
+              <li><a href="wings.html"><h3>In the Wings</h3></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><h2>CONTACT</h2></a></li>
+        </ul>
+    </nav>
+
+    <main class="light_blue">
+      <a id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="heading">Pyro, Flames and Efx</h1><br>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-7">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/ZoxpkbMQuTCfdeDyweoKn-oJKqi3AXRgDYaTOF4IAnW8fhOng1xwfGzQRCvvykBuro_dyJDLze6xbCrdaQYCKJertTiHhJt82nHEJbu8eHcSgrTGFtC20Cd5ahDtxPH6aQUA-rX_1KtXriBed7kbxfRqzDqEuo7rFSidfMaziPmeqB_f-H5GX_mcwfACLrWoInYgwqbYrazygHnA2aLSEwudPin6vO3YtJ3vkCooN6y9BsnrlREcnQhor1eQsOJvN0yibtj1bFsYot8dvb1q_OgsIdSn7nhz-hCyGfPtg7mwmzoU4_ltTdQn25ZoQDZlGMpKKddvXMMhYS2kWEK68B7skm-IMaJTgzm4Yo3Ynv9LcgGT39--WZ3VtR2OxHIiFKYk0Bz8dfIcQwwh6nWu3YsArp_ocMieiTEjc0NouCxXjgoQrLNFiJasSe-R10S8MaxrQlZG_eiUK-4XCkRoI9u1igfLNYFphkw6p4Msmsoyp4BoEScomwy2honkVbbQ2y4oxBtlmwc0HiCk5IGYKpdW8NyoocyLvgSws3SKvg9VhfqD8jAbj4bIET7BG60cQQnw68YiaDYJKXfAwk4FHP4L0idAh6nT5Pp5AQy3Wbe_269upuqA=w960-h540-no"><br>
+          </div>
+          <div class="col-md-5">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/L3NX1vA4algYXvLNt5AcKAh8vpHmU7OP0sf_M7WPK2rPwkRhztSRTjvcTuV71MEfjSBVM-zVJsWyMOrKrZluBEQtlw2B06ECvd6ts0IZBj2mgXG7hNGaSXeZ-3bT6RabHd42i1bkplHopF0K5RTxGoDKitx986Y1XfnQ1HGsfis8-Wwvt2UCou8jgcl_E8nrA4rX8EBQx_27Ev2N3eKace2yMaE9Fz7srOhrNyUlbub43zhotvqEUb1fLJogC-GzpIf-oGngdZ2uABPiMF3vbR0_iAc30xf0VuKBSHA_pOJlophQIUWMEHNDcRZE6DS3RdWZT6p1dcOgTnDKBJqo4ugSl0lkrE1FVbehids7yQ9YiVqyYpH5vonRF-vXTvt_NlNh0RQV2baOIKS52W6tilxrQndZXcK_CJN-ATaP11h17-LsEtoZfc5EvP3x6_Mj6Kh-WmSuIcuACEk2jPchJK7iYiTK3JWuHKltnknZgLfXOVOMsm7m7KjA3-6YUpMk96xgmuSUpBH5M4Ti6f5siPby5KBmDV5dOvbGFKxkXJguLhPzB94Wix0m3hr9vQU0TCQZlVYYin_0z3dZCvDLJUR89pZS-VEQp72MUzSJZQPkmWZR4iRC=w850-h638-no"><br>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <p><a href="pyro2.html">&#60&#60 prev </a> &#8226&#8226&#8226</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    
+    </main>
+
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    </body>
+    </html>

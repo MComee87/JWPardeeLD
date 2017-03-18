@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>JWPardeeLD</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
+    <style type="text/css">
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+      a#menu svg {
+        width: 40px;
+        fill: #fff;
+        background-color: #000;
+        border-radius: 5px;
+      }
+      nav, main {
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+
+      /*
+       * Off-canvas layout styles.
+       */
+
+      /* Since we're mobile-first, by default, the drawer is hidden. */
+      nav {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+
+      /* If there is enough space (> 600px), we keep the drawer open all the time. */
+      @media (min-width: 900px) {
+
+        /* We open the drawer. */
+        nav {
+          position:relative;
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+        }
+
+        /* We use Flexbox on the parent. */
+        body {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
+
+        main {
+          width: auto;
+          /* Flex-grow streches the main content to fill all available space. */
+          flex-grow: 1;
+        }
+      }
+
+      /* If there is space (> 800px), we keep the drawer open by default. */
+      @media (min-width: 600px) {
+        main > #menu:after {
+          content:;
+        }
+        main p, nav p {
+          text-decoration: none;
+        }
+      }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav id="drawer" class="dark_blue">
+      <h1 class="text-center" id="heading">Menu:</h1>
+        <ul class="text-center">
+          <li><a href="index.html"><h2>HOME</h2></a></li>
+          <li><a href="about.html"><h2>ABOUT</h2></a></li>
+          <li style="font-size: 30px">PROJECTS
+            <ul>
+              <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
+              <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
+              <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
+              <li><a href="wings.html"><h3>In the Wings</h3></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><h2>CONTACT</h2></a></li>
+        </ul>
+    </nav>
+
+    <main class="light_blue">
+      <a id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="heading">Pyro, Flames and Efx</h1><br>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-5">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/0KEPmKCsEHHpq5bDpj9mxWedmhqrzCH1t7-wABtIYgpg3E998UC3fngfdpkg6wzlmreHbaHGSdW2DIeb_amQd3V2dYwNXIik5js5ySYAS5ja-fppWMOvlcidRzdqfB4MXiGYZBLB7kvVmUP5QxPI1XuHjwBcKTbLVAzAXQLwLrXPbBRunqCF9-VC7QoHB_Lef2hvyK8oLqotBcTzc8RVD4AsYcjL-85YZbX4Rh_PH7ChSYiiPcAVQAAqducZcGsSlMvRXJXVHc57wvVTFfhM0myjGIWK_xgS636r3lN0pah0cB-DhX-FKdFlwiSrC30GV5NIQOnYcFDFahccj3ouK_pv_2lB1xJY3svvJxRf7GinKj6dHbvM3exMVjm46IChEXFJqjFPAmjEDygjMXFSkHVDInQUCeYxzZigbp48_TrrLGgDoHAmuEJxJJKxl72MRF4bgKucZ6cjCePMfFjhaMIS0bbmR_Brr1fhS0v-4evRHCPmjg2WvmnGf4zhsuKJ7Pa8ieFYAieeuhAvO9sGZVFRKlqUmhdBcEirhTe98cKP7gc04Zi5hrYeEzmyxDRAXkh1aWD6zviesjygo2gxfWUOCpgvpfQ2xyLo-hwr-vEjMSLb-rq9=w429-h638-no"><br>
+          </div>
+          
+          <div class="col-md-7">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/Bihv5stcCBws_4uHyWdv0dsbMs-ZvzmPt_GbbLo8BCxbBGxKKsA5glVfC6cA19c-SHzaPYFRs1LSow7eSCZrJP1p1c4q8KfE-cZiIwJzbSll2Z3oRMgNRWsHFsp7IaXtUbGdKWZRjeoxBEzRPBI6nLeM4fGFtgQXNpasVOEjdEdNd4bmhLDzAxu_KNxw4j4-SgBe4tlftcJn224bC11UlXHisVGLdDRZFDxQGgJIktnPdJo_ejhn0Lcp4D_WvA5-cp46wZavSFr0mPI-GmWwvM5As6dcT3CFbtD04WBDt5JhZ3zTmDtD5CaCyI-CJh5wmb8wKldbP3wYVs0hQCIYiY3EH2Kz-0egQsTjttk6i28iSZb8BEJVVDcv_a8k4l-seJw69qmw-8eyZXbCYFLLtUTeQ4qx9GnP2CZIflGpls3_33kyzYNEoR2425Ql3D2LK9slhbuHcqvy--57QEv_CPMw5pvzmiRr7GiEAEO57XWepucX2M0BBMx5kxYeCwIbjp69Xj1Pnpw6t211vBRPuWmoXN_grf2XuKhgbuYHysRijRC9g3MEgqQZAbVwgCsebz6Yb_bOk7OirWQufmJ-bZ44KG7oihz5Xmy7flRTLLi8f2qG-jQ3=s638-no">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/jnpMe3ZXaZFZ7i49rwbVvNJWUR9Mjqc7WBv-K8gKqEGv1G8ig2MZC0deBnlzazJNLUFBp2MUtaviOYjk-VCcdB0AoUpUbpNQw6TOSCz-ClfHTAufZ8IoRNd1gjpWS1AxTPotDyXFahlFcPrD7eiIK3GOIao_AsqsVMxdydaC672_UoCkzyc3PQl40rVe_fzej8ULgUyq5Sp2vLI5saCEMkELwwb3HeQcrPMkpl_zVtXGLI-AJ6UX04FI3Po_lTXjG32a8gFN5yFuy2w_rzkN4Nu9qfN-ph608t4unUVTQ182HP0ZyFAc-NKKyjMyrG6kNFAdGBxPMMwMg0NXsF3GRbtQ6JwxdV7SpHAonA-9BimiNs5ql7i4qJQEhX2PN4WkdEg_0raau77ML5mS3R6zlL2elm4NTUqRfUu04JpJq382YotKAC1OKZcrKcVp1g7_kWUTH5dIs-kzNCHuGDlfZcTMbX_HYc4RP3YD92t6NZvlDKjdcZLOzVIBFn--3rDrZQ0LMTsOWdtOZR1yBcpRrRPgjyctcODwI57WjWjyPV0ogEtEij7HBWNuqklWLr0UCYiXpE8lz_X1p_khr5Dvb31WpoBnAqhJQ988NSkndmPYaozqZQ6m=w960-h578-no"><br>
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/O1Tp3Yo6uBL7hW0WkAR8897ZlF-aKz989DW-52lSGy6kmIjYMbSEgIkNJV56mM-chMAQmyDXoIdmenY2mRvfix7di4RjBUcgzUabSEJkuBl6XAHEFOceSKEChv2-oQPHIRvHPbP3mZXIq2Zz8Uf4fixf3oLgVQ4Q2p9sLD3p5tAlf4qA9LNiRTiX8Vgla5SVKDXq72_-KUXVul7EQzrNU-GxCCZDYGOonI39dedKPTBspl1jUgQG8Se3606s_8DzYBjhv3f5-UAygA0A1YHWK6lqaG4fweB-9I73PCNWa0cKFcnBGc_kmT7teUl0lXIJEGk7F4pIZsNGmjrrrrcdtnPi1OOQF7R6zJPapV24tOuy_eSfGP7SKhlXhGkYM3ZqeExFc9n_YKtxz_AuarpgEiAGkQdxha-MNihF7Gp42IvFbARmJXBiiU7gN3GT62uzGC32-aOdGoo5Mji9XOdgqWsk_q2qwKD6O2nz-AhC8XGswfBAYVrTSbFToOSX36LihDURmwlrrq3iqqwc7xhMum0H0qBm8DJTaLWaopSeS5ATLWVb_fEA86-oMPN41iB5dB2PO8X64zm2p3fhUUYish3WMBveku2v13UyYSCvSmoTf491obUD=w960-h635-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/GRLH_bbROvtcJh0C3kRiWkoAX-Zt8E9zsT46OwgDwClgWNnbosQ5cZcByXHwctOSyVS5lr2_IdLj10NDrHCLgzyrUvPX6e90KLu-w8YE3LsWipaux06glu8TSRr3MFHbjCPXkdjjoC1Grf7Grtbk6Pvr0cRvxnIsU1VuN_ejDUDRHT1WOWGLN_3ghGL7SS1g_nX1RZAMgEIUc_bvqSLaGzgljMjF_KQR9O_tVArxjq_W20iqyyMP82EVsoTSuBMJL-znGz1siWNGN291hwO_4UCZPgN8Z4BYeeqHKKiGb75RXA99Oe59a0Eib6WHlFlXkD59XY_8TkQvlxserWM7IHMcs5V_x3wWYl74VXkXcYZkBCkP_inASEEH1KS3mETBbwYEmV8okKuPFM2h9opUHtx7gc9b0YEsuSoRDWd_J1438qkD8XSKBaYv5zx5RU1tC2wZeKxtOMdnTUeIBaNAofsrZWmbH5-KSGOf6MSEvn97RGx0PCnDDNWftBmWddXqrWAwP3wR1CQkTEGUA_1kZc7KWhMjbid0nxD0NP_hN2E_51GuEWXFX6A_B3Mq5nj7rGDgJKQWq16sXwFCuNMaOu6aBEK73NIiYhQGKT1bEP0L-yJGVK5n=w479-h638-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/KPAU7GKHHuBJkaWUFNHbvaZDltfULJTnYlqDjURCYSgC6X2ABoAFQkDte1a4qVWkqYiLLPDsCDs5Z4eSlAF9ehzpfcV3MWEtlKX0y8K2JGhShbwzRUiS0gfNWZT6CnD_0RoUN6nXES-8keDJjMwqDESXlnGLLhU9NRg5tYRubcU0Rbx2hOvXYw8tXNDiz2XgpM7gJyJXC4WeEqGcYLaNfvidQT5riZsM8wdrKXdOsgLbIEs9EISfL4APhiQOGBaB8WEnxRMSbh6gSh0Vngn_geokM49c6QJnre-w7jlgmaZy_KKlSdAOTbpQvLLo-CCtJiixNpUwcC-t9ouw8KgnDViduh7BWLxbofDwwT_4tAEOLatWDhWOzHmRwXsE-x4_K-0yqNHlnJV0aKxcp-zxsZk-eYP0uAi6baGiFe9saRdCVmXieYzRZYODAwWqlrL2bM_gS1jb6TDtVyiLWmmy8xT6Su1aZ4UGm-dDYQtRjdWfjqaBqq9XJou7pLH1m5aWv6aN01P3NNLTUHUjl3vhOf8HE93_Aag7MqJEfqOl70zw8U2NKXACT7D82_4vra8egZSTwn7jM2XML275Zk3iFlo8MqAwzLetw0ZdQWoAvvV-WIanEhpU=w479-h638-no">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/zEx5wVWHhtzaxT7HLDEikm2qlVo6VCFsvCGI3HcKoo2fRDwAXWUDjl2o9A6mUQDu_4rO_HQ7S3glN10-qh0mJIdZpkctAhUZiJ04HY1DUdTU3kGVDvWwa7Lugia0TgiUPDObmY0Ubji1-SfTPnGxjlxJWljQ9pqBwJA_YzNr1PtK7_WbN3TzeYGTPtx9lXTFr6VtVHhbDo4vVrBjfd-cY7YCxoYu9ROHU7F55Pa8B_Lfsp5T38zldIOnpiYbXDT2Gbk2ZLc1hQ4G55PYpVT-qihqroUD6AF4QMQnvvyLjDTnzrvcI_9Z2ji2gbMQ6wNCmqs3AcqdN4ubTnj7B5Zcba1Vn1toIckwu0jZWA_7C22N21iUiLWUSMs9ei0HRECGQQ1X2xVC_XjhWzEAjPyq754sMLffxkhGQluc3ZCNOt75eLVYHLyKC6at6xP0AW5ZL2U-cvwCfBz0lTcTNnqCZ239m76G1XLAebTgGAXM46tFuebdlSE9k4fWz2u2J284MOWRLeQn8dejI_Vz6U42JppyS-WOBjR7YATMHUkxwWOeq6vKD9j82qgrA_0EBLAal7hu02-MN9iS-6vdiwliODi4GwxHwfp2bqRvxHwt0lg9Q-gNzUXg=w851-h638-no">
+            <br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/TRSARJNR69PraqOSPV9Sj6s0tCASPLtLL267i7UZbrkWzTXWcMZcgFJ9ROQi-zt2gQKhBIC9MLfFCcM8azI-N3Q78hAFPFF_HANfBcCXffZmGJuv0_1Z6ZleENTWnujOPsfPcKODjQ1WVDBqvQDpU-9-Z4OWB1GfL-YYgJRyIeYvsUWPtKpgqKmcUR9AP1jj5-GMT_9_myFPTMCVYjeLztpCmT1CMneLMQkQaWk-RJQclcS9y3LCHoo4WXYIpWAZ4uVy4mLf8XSNVuW1A7CIFO6U03BTCz-H8EoScQJutK9JSbPHQDZBNH3BVsdV4MII5xwF7qILBES-FNeQdposQ1vteQeVMPocsN1ghdKUs4_cDgk5zHJbZNPdTdN19MtKM5usRSS7vh6mCu6jIegNeI1VBYmQL6sDWBlZglkxhzsgGPPtgUrcg1zrf5N2CIy2VkUKkCcd8fh1CVbbs2ctCWXp_AZ0dUL3Uo-P5-khd_wLCM6voppC1fLCVGpavWSU8UI6wv01AZeg4laX5Cvymk05beKicwQjp2jgTn4UVcm9HPAd2QqyDTWwSyM8yZa7I5Zfhk-dkWkEPUx_DpkpWb_Gckc69s0ALgvaZbS2zD8JxStjJbkN=w851-h638-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/ejwxNoWNWSxzhSYz8vIv-ndLWucz-T8NzmYeyguosTl-70pqwph2VcI5eEnP-8ad5165xdKOZvaSpqBKve44xp1vV2Tus0jsfzLoJmqr90kTu5YkJc4gysX1Sofuw8GpLwcjEdwShEj8N8UDFGWjgxMPElBZdQlvc_-DOt8FRWjiHfKvipYha_zlH20o1xlSLglh-1UfMfsv753GnDZ5GgAqPamItubTh3-r1gXw9pjSYWdkQt6yWne2N_RaG8Usk7abI553FGwMrxrZltOeAxiiOV1qZiSmIfA74eZJkSM99rFizkz4c259Rk5qHIKaMe0x4pHkf5hvvP22op_tML0FhTi8uCqennk9MdlQljd1IpBFKBff0G6MxFjpBWqf8lk2DxiBFrVlkK6VkHSD8OHhBOJWm-8KQT78VnWne5JI19B4mFKLbUEYl0EGuIwZ8tdTI4KrvXRvHs3Ai08j0r5bi2eYnGXG_2NXpwRgjHhqCWxdy9uH-l7hfSKg6xShlHD-YrkZqOLgFcAgB9GEeeJVvhe5fTweI9ALbNbE6HDPBM6ei8lOo1nit8yGvUw9-YypGA9yEgqBYBIFlxiAn_4YkgnyuxwGsWVho1UysQeXj5S5-gSe=w850-h638-no"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/fGBLU1fOYUAt26gL3QpVNC-aAhFhG72R4jF4Wybc6NJKM9ifZ18N-vDiRa5vYuTk1pqrRYhqDsJy3gv-t6t9DAhVXgpHVcZKe8ZZDLCRvmoYZGlsqG0zlQbfezpX96uSFX_pYcy60h7lmc-6G73u0oQQZxCHoFui51Gi6ske4teYUyd6HVSdwPT_nA6708p61c_dPPD0j8shPbHaSBOqzG650gAXWfiGVikPUMABlhWQPehZFs4m8sFyhFaHpvid2o6xOO1gFqJlNDTubHHDcYT6xfE7v_c7J7IWPweDj8Ejts0hIyxZ2821ZcvyWYugGYBW7IhGzcRqAUKpqV-Heyo-e_MzkmcIR_ycsr2WRLhWZRStFXZtRNut_sj_6c2Im50V9XpNUpORG9wFQFJDhXSL0s7nPRdu4kchNkY-c33dK9XEKLb-vz-8lnXOmBlOV-vTl3A-23vtl-f0LWrgk6Hj1y8yYufLGx2Vf6PO94Hd1QXWsQluFwly770NfBBRHdfaXJLSgwbS-dt6rTxg-XK5USIvf2K6-hHaXl3iM4mtqD-o6-few8vGPcsUhh4FYtubsYp0irYWt94j9XAikzF2vRIctG9oIGhp4gI7igDBT6SMmbvt=w850-h638-no"><br>
+          </div>
+          <div class="col-md-3">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/94iCgWSBN6U_3pASDQDnzguBgJlSmSmur3VEEz0Ww0e5GrmTe_zHjQaGtNgSS7B4baA2qIdvyhtRhRBltz0rEfY1Nc2eAszlt5knLfl0fsJ2hztLeBF6fT4DKGbKaSJM8XI6oXhPB85DJtgmQHGUqezSUHcwJ24UfM70NJz1ljp0Q7-1RnERFaImtbWhfdxhWaylD2Op3nG9USPZapqGKbdo3LOd6QV_UlcgCr03eunu348Eq5afJ0lDHtZ_R8Oq9q-ax2akLBikhDTS0jZR5_HA0T2pRszUT0n6N5a8Acv0mQyTcjAds1Pchp84Qj99VfcL7YiKMK7oFirj_N_FpJHI1VhMma8C3MwFJbxx9g6jlMdzuo5T6QW7EW52oQOiNPfxt6M7kpMbJA9HZloD-aIs5ZXcDa_2EqNL3TbZ5PsF05PApwjHNISUnZPda2f_-N5cKyyyKhdLng2-NAZRjtrVebwysegQsgOX5nluKNcGRYpSXKe7nvXT7YlvJL_5aDcYM9QtVfTaI_sdnyBs3G5xcrGk-5cI8JVR7PVE3LR6_CF4oO8pg4dlc-lJxlD9_5zdLwnvEV8QeZORvApoNVqBvXAZyuOst8mSNkuS4r2x8uJe9ku7=w479-h638-no"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="https://lh3.googleusercontent.com/0ibAE7CyyQDnrPRbdiYOdeIt8S87LJN2yW4hKU_AiX0_Ch4s79pvH7y4SqXwOXZe1EmH26urH-jsG4tkVcZV2PEqGMLKUNDKNFm-oIYOhCiUFIJQodBIca40UDyrrhdLuLMYegud51aiWHdn9FsrpWJcQY0-PaRYtm8g6FxdHegqdoDE7Rqzucb5ZrAoplkNoIaB_vER_6mtRuFbwduILUr53H4hT7Q1Ch9-dlvn6wLb3i6fPa_HaXpb0HL-XckPhKkYQnOYC4z-LKixv-bo_wDJhMMtuAYhrOeu1U09xgN5ZpAsb7IKATJp7JNCh82XMUzasIAW2W9xuNBbYCXQcYMfqBxuSnFWZq6g16CDT4j-z4XGpHX6ndubIqCijNTkv_h4fbdS0Jm_qvgW-4HNl9wFXWdwLdfqkWZWpCuLtcrLa5ovkdLqf2GmTdXn0uGzVEoRoDVj63sqo169ZGVz5lJgSs99aARUKlWPtENs9cquWMEkG-XrF7gpIeBJa0IK4XZ7-m5lDzKKELceAfsupRXkG49AmCW_pJ_lEV6MhA7zmxCjqiT756qxnbY4RKk0WpLQWIt7BPyEAJ_qjbYWCIHGNN_gE5Jm-VxtELR-MRl7ewR1MjS2=w640-h546-no"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p><a href="pyro.html">&#60&#60 prev </a> &#8226&#8226&#8226 <a href="pyro3.html"> next &#62&#62</a></p>
+          </div>
+        </div>
+
+
+
+      </div>
+    
+    </main>
+
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    </body>
+    </html>
