@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>JWPardeeLD</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
+    <style type="text/css">
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+      a#menu svg {
+        width: 40px;
+        fill: #fff;
+        background-color: #000;
+        border-radius: 5px;
+      }
+      nav, main {
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+
+      /*
+       * Off-canvas layout styles.
+       */
+
+      /* Since we're mobile-first, by default, the drawer is hidden. */
+      nav {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+
+      /* If there is enough space (> 600px), we keep the drawer open all the time. */
+      @media (min-width: 900px) {
+
+        /* We open the drawer. */
+        nav {
+          position:relative;
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+        }
+
+        /* We use Flexbox on the parent. */
+        body {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
+
+        main {
+          width: auto;
+          /* Flex-grow streches the main content to fill all available space. */
+          flex-grow: 1;
+        }
+      }
+
+      /* If there is space (> 800px), we keep the drawer open by default. */
+      @media (min-width: 600px) {
+        main > #menu:after {
+          content:;
+        }
+        main p, nav p {
+          text-decoration: none;
+        }
+      }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav id="drawer" class="dark_blue">
+      <h1 class="text-center" id="heading">Menu:</h1>
+        <ul class="text-center">
+          <li><a href="index.html"><h2>HOME</h2></a></li>
+          <li><a href="about.html"><h2>ABOUT</h2></a></li>
+          <li style="font-size: 30px">PROJECTS
+            <ul>
+              <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
+              <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
+              <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
+              <li><a href="wings.html"><h3>In the Wings</h3></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><h2>CONTACT</h2></a></li>
+        </ul>
+    </nav>
+
+    <main class="light_blue">
+      <a id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="heading">Tour and Concert Projects</h1><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>House to Half…House out…Lighting go! With an eye for the details and years of working with some of the biggest names in the industry, Jeffrey Pardee has developed into one of the most creative concert and theatre designers in the industry. </p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/FullSizeRender.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/FullSizeRender-1.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/FullSizeRender-3.jpg"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/FullSizeRender-4.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/FullSizeRender-6.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_0072.jpg"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_0073.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_0666.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_0758.jpg"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_0954.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_3642.jpg"><br>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="TourPhotos/IMG_7356.jpg"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>&#8226&#8226&#8226 <a href="tour2.html"> next &#62&#62</a></p>
+          </div>
+        </div>
+
+
+
+      </div>
+    
+    </main>
+
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    </body>
+    </html>
