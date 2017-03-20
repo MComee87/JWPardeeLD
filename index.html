@@ -110,7 +110,7 @@
           <li><a href="index.html"><h2>HOME</h2></a></li>
           <li><a href="about.html"><h2>ABOUT</h2></a></li>
           <li style="font-size: 30px">PROJECTS
-            <ul>
+            <ul id="dropdown">
               <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
               <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
               <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
@@ -310,6 +310,11 @@
         drawer.classList.remove('open');
       });
 
+    </script>
+    <script>
+      $( "#dropdown" ).click(function() {
+        $( this ).toggleClass( "dropdown" );
+      });
     </script>
     <script>
       $(function() { $('header')})
