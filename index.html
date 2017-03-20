@@ -18,7 +18,16 @@
     <!-- [if lt IE 9]-->
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+     
+      <script type="text/javascript">
+      	$(document).ready(function(){
+      		$('li').click(function(){
+      			$(this).find('ul>li').stop().fadeToggle(300);
+      		});
+      	});
+      </script>
+
+    <!--[endif]-->
     <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
     <style type="text/css">
       
@@ -310,11 +319,6 @@
         drawer.classList.remove('open');
       });
 
-    </script>
-    <script>
-      $( "#target" ).click(function() {
-        $( "#dropdown" ).toggleClass( "dropdown" );
-      });
     </script>
     <script>
       $(function() { $('header')})
