@@ -36,6 +36,10 @@ footer {
   width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #heading {
   border-radius: 10px;
   text-shadow: 1px 1px 0px #000;
@@ -79,8 +83,7 @@ footer {
   color: #fff;
 }
 
-
-#drawer ul li:hover ul {
+.modal-content {
     z-index: 11;
     display: block;
     text-shadow: 1px 1px 0px #000;
