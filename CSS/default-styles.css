@@ -66,11 +66,6 @@ ul {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
 }
 
-.project-lable a {
-  color: #fff;
-  text-decoration: none;
-}
-
 .item img {
   height: 100%;
   margin-left: auto;
