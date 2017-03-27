@@ -19,6 +19,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="./CSS/default-styles.css">
     <style type="text/css">
       
@@ -98,21 +101,17 @@
       }
 
     </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    
   </head>
   <body>
     <nav id="drawer" class="dark_blue">
-      <h1 class="text-center">Menu:</h1>
-        <ul>
+      <h1 class="text-center" id="heading">Menu:</h1>
+        <ul class="text-center">
           <li><a href="index.html"><h2>HOME</h2></a></li>
           <li><a href="about.html"><h2>ABOUT</h2></a></li>
-          <li style="font-size: 30px">PROJECTS
-            <ul>
-              <li><a href="tour.html"><h3>Tour and Concert Projects</h3></a></li>
-              <li><a href="corporate.html"><h3>Corporate Events</h3></a></li>
-              <li><a href="pyro.html"><h3>Pyro/Flames/Efx</h3></a></li>
-              <li><a href="wings.html"><h3>In the Wings</h3></a></li>
-            </ul>
-          </li>
+          <li><a href="projects.html"><h2>PROJECTS</h2></a></li>
           <li><a href="contact.html"><h2>CONTACT</h2></a></li>
         </ul>
     </nav>
@@ -123,75 +122,65 @@
           <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
         </svg>
       </a>
-
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Tour and Concert Projects</h1><br>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center" id="heading">Projects</h1>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p>House to Half…House out…Lighting go! With an eye for the details and years of working with some of the biggest names in the industry, Jeffrey Pardee has developed into one of the most creative concert and theatre designers in the industry. </p><br>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <p><a href="#">&#60&#60 prev </a> &#8226&#8226&#8226 <a href="#"> next &#62&#62</a></p>
-          </div>
-        </div>
-
-
-
       </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6"> 
+        <a href="tour.html">
+          <img class="img-responsive" src="https://lh3.googleusercontent.com/GAyhqtwAT_pGPlgGmF8m7_cNNgS8VoYDfRB-g6nqMLTlwFUjTg3ZFMxUobiqKW8VNA9CDGfA8Vi4B5mQk83qte4NU_9cQc5pqjNwKtU66VuRoW_kQv1Ic1SAs-Ms-tOhkv91c9yq0b7miLe4BHSPto8kGITmpCdUwu8h33Lz4VIpvHPkZYsL7qa9dCikIEs-UUM5TPiItPrkt86lRhaNb_c5oPVCOpR69IWepc4KgtE9TzlkZNrzNpMKMldoHgwcqZx6oOF_OyDsZFF7hIneSJEeKJoB7dpwzpPktuCORtv8XOQhgrdvkW2xLGT-7B7xemHzYj7aulihSjxKQz81lr8pi8azLQRi7pYDS6caVVTCvp_sCy2g6oeJKILIcoyer7KlSgkS1VKbTZ77NGZ8Yr5VoGdhbBUXSPenlfBI9G7foZFJbBUOxSJcuJWj-Hm78_VuLpuXy54cCwdbT0x04sHJIYsBFNlwtGzeF7WEZgm41gquRBvvOi2tBagBhnXBjlAULzm56DLPPfDWKspI2T371IvViN_PjF7hi7-QcyazhmIqTxKvbhCLfM6SBaphdByhNunyqcPSgs5BiKH6XxpxLhHmizvKRQ_moeU6wEU9Sp5yoBOV=w576-h383-no">
+        </a><p class="project-lable text-center">Tour and Concert Projects</p>
+        <br>
+        </div>
+        
+        <div class="col-md-6"> 
+        <a href="pyro.html">
+          <img class="img-responsive" src="https://lh3.googleusercontent.com/O1Tp3Yo6uBL7hW0WkAR8897ZlF-aKz989DW-52lSGy6kmIjYMbSEgIkNJV56mM-chMAQmyDXoIdmenY2mRvfix7di4RjBUcgzUabSEJkuBl6XAHEFOceSKEChv2-oQPHIRvHPbP3mZXIq2Zz8Uf4fixf3oLgVQ4Q2p9sLD3p5tAlf4qA9LNiRTiX8Vgla5SVKDXq72_-KUXVul7EQzrNU-GxCCZDYGOonI39dedKPTBspl1jUgQG8Se3606s_8DzYBjhv3f5-UAygA0A1YHWK6lqaG4fweB-9I73PCNWa0cKFcnBGc_kmT7teUl0lXIJEGk7F4pIZsNGmjrrrrcdtnPi1OOQF7R6zJPapV24tOuy_eSfGP7SKhlXhGkYM3ZqeExFc9n_YKtxz_AuarpgEiAGkQdxha-MNihF7Gp42IvFbARmJXBiiU7gN3GT62uzGC32-aOdGoo5Mji9XOdgqWsk_q2qwKD6O2nz-AhC8XGswfBAYVrTSbFToOSX36LihDURmwlrrq3iqqwc7xhMum0H0qBm8DJTaLWaopSeS5ATLWVb_fEA86-oMPN41iB5dB2PO8X64zm2p3fhUUYish3WMBveku2v13UyYSCvSmoTf491obUD=w960-h635-no">
+        </a><p class="project-lable text-center">Pyro, Flames and Efx</p>
+        <br>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6"> 
+        <a href="corporate.html">
+          <img class="img-responsive" src="https://lh3.googleusercontent.com/s6q_JyBh3WuUVjHnmzaG8RN0zH8Zg9rrvQCUIM44bKjLh7fgWlX1F_lTrn0cIylhWLdZngRjKDxN7EdX5hUg8noUlML0l7Rcgb8cgv6izXj3YDrQB6S7IRTb2Zk8k0hS3HG6TPo_xo2Xcv8TAtxACCD5JQVO4SunByZCY8vJWOCvjNVOYppR1wLKllydUWjscUArb1Pzbqdd6r-A2V4HQmGY0rbpmerrttOqlUn0gVtvvj5yzzWQovZ0jLBivdYtrYiRwt31PquVDy7EcBTiBW24MM5JobMVpB1Lo46Jue4aIe0K8Wro3Tj-0QelpPZYFNCymIyYRXZQsrfNWg7mS-hLFPvJ-q694MvdccQAjmOzNqyAj33PSX_h80ezM5IqzR1xTtu-jBYmblbT26lGgi7d5_x2SNVEBHU4C_j1xofnn04Suo3SGVkawJtQcklVhb3LxosV-ceoKL2Y1HRkv3hIugKEceQsUn5aNRQzWwj0fCcWWjQlQxy_CCY2Dx_HSPF2P_5Dn78KdrehJuG-UxeHGkMoObaVmI5csCY4rNx580133wDU1uThc07eTBc3IDm3f5xBj4Nht_1w2iZvf9aAee1BXB1Qvj79ogkf73tcxhtVHaQl=w850-h638-no">
+        </a><p class="project-lable text-center">Corporate Projects</p>
+        <br>
+        </div>
+        
+        <div class="col-md-6"> 
+        <a href="wings.html">
+          <img class="img-responsive" src="https://lh3.googleusercontent.com/rdzVEtWcCiXR-3-1KoJ3-lAcZjz8_xmq3rdRS33L4bCr4Qhq23vkzApMBIofsLfjsJkuJRSm3yfvzwkFe2CrA47ICAPEGGM1tJR8u_LlE0iTGNiBfx1CGbK4NmWsbwkyEnKm-cj5hn5eOvouy8GfmxNfN-A1hhL58qb080dNj2dRGKnCW8WyEuo1Uyxoy6gGq1bDI0Ku3H5vLemlDNkigLqOQyBRp2tReErvDBFAz_Ub_TwZkq5BUOKcQL62XATC8d0IzmVSFqKuRFCNgVIxKBMvd_tgzzf6B6PLn3xHfVFyvD2p5sNhg5kTJ3mpvf0XNG6BnRAyeaDeWT1gJksA77PghG0t5Y2f_xwtOsYTxzrayiVPe9m9IQqjeM4aPEHy7iL4nrdPB-0xWaenuCFn3pOhkG8KdPFvUuZC-GS5jjlUsThHp7T6WCsQwcFMRcsM7VlLGzx55nXQWdOHSzeCgls8WDlo570nVVuDv8FxTId9h5d_cfEstecTobujEZX_uKUxN0zzqD-gGhpT0edKtHuqmUWADBnMppXnIynLX02d2vR72jC2NhH32IDNcaEqrFjKYYuGXvaZAcuh6N61-Hf5aXX59CC0fapX6K1PPSRptTl5Mjj1=w851-h638-no">
+        </a><p class="project-lable text-center">In the Wings</p>
+        <br>
+        </div>
+      </div>
+      
+
+      <footer>
+    <div class="row">
+    <div class="col-md-3">
+      <h4 class="text-center"></h4>
+    </div>
+    <div class="col-md-6">
+      <h4 class="text-center">JWPardeeLD 2017</h4>
+    </div>
+    <div class="col-md-3">
+      <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss"
+        alt="Valid CSS!" />
+      </a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
     
     </main>
 
@@ -212,6 +201,8 @@
       });
 
     </script>
+
+  
         <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
